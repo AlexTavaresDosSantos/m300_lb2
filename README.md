@@ -130,49 +130,47 @@ Hier ist eine Tabelle mit ein paar Linux Grundbefehlen
 #### Testfall 1
 
 #### Durchführung
-| Tester/in          |  Alex Santos  |
-|:------------------:|:-------------:|
-| Datum              | 17.03.2021    |
-| Testergebnis       | erfolgreich   |
-| Fehlerbeschreibung | Keine Fehler  |
+| Tester/in          |  Alex Santos                                                                                                              |
+|:------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
+| Datum              | 17.03.2021                                                                                                                |
+| Testergebnis       | erfolgreich                                                                                                               |
+| Fehlerbeschreibung | Keine Fehler                                                                                                              |
 
-| ID                 |                                          1                                               |
-|:------------------:|:----------------------------------------------------------------------------------------:|
-| Beschreibung       | Im Vagrantfile mit folgender Funktion "config.vm.provison" SHELL Befehle durchführen.    |
-| Erwatetes Ergebnis | Der Service Nginx beim vagrant up installieren.                                          |
-| Ergebnis           | Der Service Nginx wurde erfolgreich installiert und gestartet                            |
+| ID                 |                                                             1                                                             |
+|:------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
+| Beschreibung       | Im Vagrantfile mit folgender Funktion "config.vm.provison" SHELL Befehle durchführen.                                     |
+| Erwatetes Ergebnis | Der Service Nginx beim vagrant up installieren.                                                                           |
+| Ergebnis           | Der Service Nginx wurde erfolgreich installiert und gestartet                                                             |
 
 #### Testfall 2
 
 #### Durchführung
-| Tester/in          |  Alex Santos                                                         |
-|:------------------:|:--------------------------------------------------------------------:|
-| Datum              | 18.03.2021                                                           |
-| Testergebnis       | fehlgeschlagen                                                       |
-| Fehlerbeschreibung |"VM cant start a fatal error occured while the network configuration" |
+| Tester/in          |  Alex Santos                                                                                                              |
+|:------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
+| Datum              | 18.03.2021                                                                                                                |
+| Testergebnis       | fehlgeschlagen                                                                                                            |
+| Fehlerbeschreibung |"VM cant start a fatal error occured while the network configuration"                                                      |
 
-| ID                 |                                                               2                                                           |
+| ID                 |                                                             2                                                             |
 |:------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
 | Beschreibung       | Die Static IP Einstellung zu DHCP ändern im Vagrantfile mit der Funktion "config.vm.network"                              |
 | Erwatetes Ergebnis | Die VM bezieht eine IP Adresse in meinem Netzwerk über DHCP beim straten                                                  |
 | Ergebnis           | Die VM konnte man nicht mehr starten. Ich musste die Konfiguration die ich im Vagrantfile getätigt habe aus Kommentieren  |
 
-
-
 #### Testfall 3
 
 #### Durchführung
-| Tester/in          |  Alex Santos  |
-|:------------------:|:-------------:|
-| Datum              | 18.03.2021    |
-| Testergebnis       | erfolgreich   |
-| Fehlerbeschreibung | Keine Fehler  |
+| Tester/in          |  Alex Santos                                                                                                              |
+|:------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
+| Datum              | 18.03.2021                                                                                                                |
+| Testergebnis       | erfolgreich                                                                                                               |
+| Fehlerbeschreibung | Keine Fehler                                                                                                              |
 
-| ID                 |                                          3                                               |
-|:------------------:|:----------------------------------------------------------------------------------------:|
-| Beschreibung       | Im Vagrantfile die Box Settings apassen mit der funktion "config.vm.provider"            |
-| Erwatetes Ergebnis | Die CPU und die RAM im Vagrantfile angeben. CPU = 2 und RAM = 2                          |
-| Ergebnis           | Ich konnte erfolgreich die Anpassung durchführen                                         |
+| ID                 |                                                             3                                                             |
+|:------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
+| Beschreibung       | Im Vagrantfile die Box Settings apassen mit der funktion "config.vm.provider"                                             |
+| Erwatetes Ergebnis | Die CPU und die RAM im Vagrantfile angeben. CPU = 2 und RAM = 2                                                           |
+| Ergebnis           | Ich konnte erfolgreich die Anpassung durchführen                                                                          |
 
 
 
