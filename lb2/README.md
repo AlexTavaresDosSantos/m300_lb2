@@ -9,7 +9,7 @@ Wir werden für die LB2 ein Webserver aufstellen.
     * Git
 * Bereitstellung des Nginx Service
 * Testfälle
-* Quellenverzeichniss
+* Reflexion
 ## **Grafische Übersicht**
 Das folgende Bild zeigt auf wie die Umgebung aufgebaut ist. 
 ![Netzwerkplan](\m300_lb\lb2\Netzwerkplan.png)
