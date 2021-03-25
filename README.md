@@ -70,9 +70,28 @@ Da ich meinem Webserver einbisschen mer Ressourcen geben wollte habe ich dies mi
 ```
 ## **Befehle**
 ### **Git**
+Die Folgenden Befehlhe wurde bei diesem Projekt verwendet
+
+Dateien oder ganze Verzeichnisse unter Git-Verwaltung stellen:
+```
+git add <Datei-/Verzeichnisname>
+```
+Aktuellen Projektstand sichern.
+```
+git commit
+```
+Datei verschieben
+```
+git mv <Quelldatei> <Ziel>
+```
 Anzeigen von aktuellen File-Status.
 ```
 git status
+```
+Datei löschen
+```
+git rm <Datei> 
+git rm -r <Verzeichnis>
 ```
 Datei die ge-staged wurde, aus dem Index entfernen.
 ```
@@ -81,6 +100,10 @@ git reset HEAD {file}
 Zeigt alles was im Workplace geändert wurde aber noch nicht im Index ist.
 ```
 git diff
+```
+Lokalen Arbeitsstand in das Remote Repository 
+```
+git push
 ```
 Zeigt was bereits zum Commit vorgemerkt wurde.
 ```
@@ -94,7 +117,13 @@ Remote Repository anzeigen
 ```
 git remote -v
 ```
+Versionsgeschichte betrachten
+```
+git log
+```
 ### **Vagrant** 
+Diese Liste an Befehle oder Funktionen wurde zusammen mit dem so gennanten Vagrant verwendet.
+
 Mit folgendem Befehl initialisiert man eine gewünschte Box
 ```
 vagrant init Beispiel/Box
@@ -103,7 +132,14 @@ Starten der Vagrant Box
 ```
 vagrant up
 ```
-### **Vagrantfile**
+Box herunterfahren
+```
+vagrant halt
+```
+Neustart der Box
+```
+vagrant reload
+```
 Definition der Box
 ```
 config.vm.box "Windows" oder "Ubuntu" ...
