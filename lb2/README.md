@@ -11,7 +11,8 @@ Wir werden für die LB2 ein Webserver aufstellen.
 * Testfälle
 * Quellenverzeichniss
 ## **Grafische Übersicht**
-Hier 
+Das folgende Bild zeigt auf wie die Umgebung aufgebaut ist. 
+![Netzwerkplan](\m300_lb\lb2\Netzwerkplan.png)
 ## **Bereitstellung des Nginx Service**
 Mit folgender Anleitung kann man ein Service Names Nginx bereitstellen.
 Diese Anleitung dient auch zur erläuterung was ich für Sachen gemacht habe um dies Bereitstellen zu können. 
