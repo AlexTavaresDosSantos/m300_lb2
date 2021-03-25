@@ -11,6 +11,7 @@ Wir werden für die LB2 ein Webserver aufstellen.
 * Testfälle
 * Quellenverzeichniss
 ## **Grafische Übersicht**
+Hier 
 ## **Bereitstellung des Nginx Service**
 Mit folgender Anleitung kann man ein Service Names Nginx bereitstellen.
 Diese Anleitung dient auch zur erläuterung was ich für Sachen gemacht habe um dies Bereitstellen zu können. 
@@ -22,6 +23,9 @@ In meinem Fall war es der Service Nginx der nur auf Linux läuft also habe ich m
 
 **ubuntu/trusty64**
 
+Leider ist bei dieser Box beim starten notwendig die Taste **S** zu drücken damit es in das System booted. Dies konnte ich leider nicht 
+automatisieren.
+
 Wen man nun sich für eine Box entschieden hat kann man dan loslegen mit dem initialiesern der Box. 
 ```
 vagrant init ubuntu/trusty64
@@ -31,7 +35,6 @@ Wen man nun die Box straten möchte kann man dies mit folgenden Befehl
 ```
 vagrant up
 ```
-
 ### **Nginx**
 
 Um Nginx zu installieren um die Website bereit zu stellen müssen folgende commands abgedrückt werden. 
@@ -57,7 +60,13 @@ Das heisst wen man **Vagrant UP** macht dan wird der Service direkt installiert.
     service nginx start
   SHELL
 ```
-Da ich meinem Webserver einbisschen mer Ressourcen geben wollte habe ich dies mit der Funktion 
+Da ich meinem Webserver einbisschen mer Ressourcen geben wollte habe ich dies mit der Funktion config.vm.provision gemacht. 
+```
+  config.vm.provider "virtualbox" do |vb|
+     vb.gui = true
+     vb.memory = "2024"
+      vb.cpus = "2"
+```
 ## **Befehle**
 ### **Git**
 Anzeigen von aktuellen File-Status.
@@ -108,16 +117,14 @@ config.vm.network "forwarded_port"
 config.vm.network "private_network"
 config.vm.network "public_network"
 ```
-Folgendes Beispiel Zeigt auf wie man direkt beim starten der VM das Betriebsystem
-mit dem Service apache2 vorinstalliert startet.
+Mit folgender Funktion kann man Befehle im Terminal beim starten der Box eingeben lassen.
 ```
 config.vm.provision "shell", inline <<-SHELL
-    apt-get update
-    apt-get install -y apache2
 SHELL
 ```
 ### **Linux** 
 Hier ist eine Tabelle mit ein paar Linux Grundbefehlen 
+
 | Befehl                             | Beschreibung                                         |
 |:----------------------------------:|:----------------------------------------------------:|
 | sudo apt-get install «Paket»       | Dieser Befehl dient um etwas zu installieren         |
@@ -172,6 +179,10 @@ Hier ist eine Tabelle mit ein paar Linux Grundbefehlen
 | Erwatetes Ergebnis | Die CPU und die RAM im Vagrantfile angeben. CPU = 2 und RAM = 2                                                           |
 | Ergebnis           | Ich konnte erfolgreich die Anpassung durchführen                                                                          |
 
+### **Reflexion**
 
-
-
+Im grossen und ganzen bin ich zufrieden mit meinem Projekt da es mir gefallen hat etwas neues aus zu probieren. 
+Ich habe zwar ein kleines Projekt gemacht aber aus dem Grund, das man so einen guten Überblick hatte und trotzdem mit vielen Befehlen arbeiten konnte.  
+Am anfang muss ich ehrlich sagen war es sehr schwierig einzusteigen und zum teil auch sehr frustrierend wen etwas nicht ging. 
+Nachdem ich aber den dreh raus hatte, versuchte ich jegliste Sachen und fand sogar spass dran. 
+Ich hoffe das wir in Zukunft wieder mit Git Hub arbeiten können und ich so noch mehr Erfahrung sammeln kann um besser darin zu werden.
